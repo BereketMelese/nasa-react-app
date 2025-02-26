@@ -27,9 +27,11 @@
 .imgContainer {
   display: flex;
   flex-direction: column;
+  max-height: 100vh;
+  width: 100%;
 }
 
-.bg-img {
+.bgImage {
   width: 100%;
   height: 100%;
   flex: 1;
@@ -42,6 +44,7 @@ footer {
   left: 0;
   width: 100%;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   gap: 1rem;
   padding: 1rem;
@@ -133,7 +136,7 @@ footer button:hover {
   margin-right: auto;
   cursor: pointer;
   transition-duration: 200ms;
-  padding: 1rem;
+  padding: 1rem 0;
 }
 
 .sidebarContents button:hover {
@@ -146,7 +149,7 @@ footer button:hover {
   gap: 0.5rem;
 }
 
-.discriptionTitle {
+.descriptionTitle {
   font-size: 1.1rem;
   font-weight: 200;
 }
@@ -161,13 +164,14 @@ footer button:hover {
 .loadingState i {
   opacity: 0.2;
   font-size: 3rem;
-  animation: spin 1.8s linear infinite;
+  animation: spin 1s linear infinite;
 }
 
 @keyframes spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -178,9 +182,18 @@ footer button:hover {
     position: relative;
     inset: unset;
     min-width: 30%;
+    max-height: 100vh;
     box-shadow: 0 0 40px 1px #030615;
   }
+
   .sidebarContents {
     margin: unset;
+    width: 100%;
+  }
+
+  .bgOverlay {
+    right: 0;
+    left: unset;
+    width: 100vw;
   }
 }
